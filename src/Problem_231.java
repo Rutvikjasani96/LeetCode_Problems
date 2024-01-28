@@ -1,7 +1,7 @@
 public class Problem_231 {
 //    Power of Two
     public static void main(String[] args) {
-        int n = 0;
+        int n = 32;
         boolean ans = isPowerOfTwo(n);
         System.out.println("ans : "+ans);
     }
