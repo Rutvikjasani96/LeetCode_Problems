@@ -23,6 +23,7 @@ public class Problem_54 {
         int row_end = m - 1;
         int col_end = n - 1;
         while(ans.size() < n*m){
+            //For starting row addition
             for(int i = col_start; i <= col_end; i++){
                 ans.add(matrix[row_start][i]);
             }
@@ -32,13 +33,13 @@ public class Problem_54 {
                 ans.add(matrix[i][col_end]);
             }
             //To add last row
-            if(row_start != row_end){
+            if(row_start != row_end){   // one row matrix check
                 for(int i = col_end - 1; i >= col_start; i--){
                     ans.add(matrix[row_end][i]);
                 }
             }
             //To add first colm
-            if(col_start != col_end){
+            if(col_start != col_end){   // one column matrix check
                 for(int i = row_end - 1; i >= row_start + 1; i--){
                     ans.add(matrix[i][col_start]);
                 }
