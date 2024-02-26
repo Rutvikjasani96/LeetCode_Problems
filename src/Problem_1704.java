@@ -6,7 +6,7 @@ public class Problem_1704 {
     }
     static boolean halvesAreAlike(String s) {
         String str1 = s.substring(0,(s.length())/2);
-        String str2 = s.substring(s.length()/2,s.length());
+        String str2 = s.substring(s.length()/2); // if we donot add end index it will s.length()
         System.out.println("str1 : "+str1);
         System.out.println("str2 : "+str2);
         int hav1=0,hav2=0;
