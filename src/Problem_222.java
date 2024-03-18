@@ -1,0 +1,14 @@
+public class Problem_222 {
+//    Count Complete Tree Nodes
+    public int countNodes(TreeNode root) {
+        if (root == null) {
+            return 0;
+        } else if (root.right == null) {
+            return countNodes(root.left) + 1;
+        } else if (root.left == null) {
+            return countNodes(root.right) + 1;
+        } else {
+            return countNodes(root.left) + countNodes(root.right) + 1;
+        }
+    }
+}
